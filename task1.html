@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC BARCELONA LEGENDS</title>
+    <link rel="stylesheet" href="fcbarcelona.css">
+</head>
+<style>
+    /* styles.css */
+body {
+    font-family: 'courier new', Monospace;
+    margin: 0;
+    background-color: navy;
+    color: white;
+    line-height: 1.6;
+    size: 80px;
+}
+nav ul li a.active {
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+header {
+    background: royalblue;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.5em;
+}
+
+header p {
+    margin: 10px 0 0;
+}
+
+nav {
+    background: skyblue;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color:white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: lightgray;
+    border-radius: 10px;
+}
+
+main {
+    padding: 20px 0;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: darkorange;
+}
+
+.players .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.player-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.player-card img {
+    width: 100%;
+    height: auto;
+}
+
+.player-card h3 {
+    margin: 10px 0;
+    color: navy;
+}
+
+.player-card p {
+    padding: 0 15px;
+    margin: 10px 0;
+    color: rgb(0, 0, 0);
+}
+
+footer {
+    background: royalblue;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: navy;
+    color: white;
+    line-height: 1.6;
+    font-family: 'courier new', Monospace;
+    padding-top: 160px; /* Height of the fixed header */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: royalblue;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 1000; /* Ensure the header stays on top of other elements */
+}
+footer p {
+    margin: 0;
+}
+</style>
+<body>
+    <header>
+        <div class="container">
+            <h1>FC BARCELONA LEGENDS</h1>
+            <p>Explore the rich history, achievements, and legendary players of FC Barcelona.</p>
+        </div>
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="#about">About FC Barcelona</a></li>
+                    <li><a href="#players">Legendary Players</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="home">
+        <div class="container">
+            <section id="about" class="about">
+                <h2>About FC Barcelona</h2>
+                <p>FC Barcelona, also known as Barça, is a professional football club based in Barcelona, Catalonia, Spain. Founded in 1899, the club has become one of the most successful and popular sports clubs in the world.</p>
+            </section>
+
+            <section id="players" class="players">
+                <h2>Legendary Players</h2>
+                <div class="grid">
+                    <div class="player-card">
+                        <img src="./messi.jpg" alt="Lionel Messi">
+                        <h3>Lionel Messi</h3>
+                        <p>Argentine forward, widely regarded as one of the greatest players of all time.</p>
+                    </div>
+                    <div class="player-card">
+                        <img src="./cruff.jpeg" alt="Johan Cruyff">
+                        <h3>Johan Cruyff</h3>
+                        <p>Dutch football legend who revolutionized the game with his innovative tactics.</p>
+                    </div>
+                    <div class="player-card">
+                        <img src="./puyol.jpeg" alt="Carles Puyol">
+                        <h3>Carles Puyol</h3>
+                        <p>Catalan defender who captained Barcelona to numerous titles and was known for his leadership.</p>
+                    </div>
+                    <div class="player-card">
+                        <img src="./xavi.jpeg" alt="Xavi Hernandez" style="height: 160px;">
+                        <h3>Xavi Hernández</h3>
+                        <p>Spanish midfielder who played a crucial role in Barcelona's dominance during the early 2000s.</p>
+                    </div>
+                    <div class="player-card">
+                        <img src="./iniesta.webp" alt="Iker Casillas">
+                        <h3>Andreas Iniesta</h3>
+                        <p>Spanish midfield mastero who won numerous titles with Barcelona,played a crucial role in Barcelona's dominance during the early 2000s.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 FCBarcelona Legends | Designed by Your Name</p>
+        </div>
+    </footer>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all nav links
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    // Function to handle link clicks
+    function handleLinkClick(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').slice(1);
+        const targetElement = document.getElementById(targetId);
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Add click event listeners to all nav links
+    navLinks.forEach(link => link.addEventListener('click', handleLinkClick));
+
+    // Function to check which section is currently visible
+    function checkActiveSection() {
+        const sections = document.querySelectorAll('section');
+        const currentScrollPosition = window.pageYOffset + window.innerHeight / 2;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (currentScrollPosition >= sectionTop && currentScrollPosition < sectionBottom) {
+                const sectionId = section.id;
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+
+    // Update active state on scroll
+    window.addEventListener('scroll', checkActiveSection);
+
+    // Initial check on page load
+    checkActiveSection();
+
+    // Adjust body padding to account for fixed header
+    const headerHeight = document.querySelector('header').offsetHeight;
+    document.body.style.paddingTop = `${headerHeight}px`;
+});
+
+
+</script>
+</body>
+</html>
